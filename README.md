@@ -1,5 +1,9 @@
 ### Hi there 👋
-x
+
+![enter image description here](Hardware/1.%20Machine%20Frame/Pictures%20and%20Videos/1.png)
+![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/1.%20Machine%20Frame/Pictures%20and%20Videos/1.png)
+
+
 <!--
 **PixiePlacer/PixiePlacer** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
