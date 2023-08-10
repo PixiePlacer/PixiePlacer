@@ -11,7 +11,7 @@ Something look wrong? Please [let me know](https://github.com/PixiePlacer/PixieP
 ![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/1.png)
 ![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/0.png)
 ![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/2.png)
-![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/3.png)
+![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/5.png)
 
 
 ***
