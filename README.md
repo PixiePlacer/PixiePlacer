@@ -1,3 +1,4 @@
+# PixiePlacer
 Welcome OpenPnP Community to the **PixiePlacer Wiki**!
 The PixiePlacer is a **DIY Pick and Place Machine** for SMD Components based around the amazing software **OpenPnP**. The machine is designed to be low cost and suited towards mid-scale manufacturing. A big shout out to the developers of OpenPnP that keep constantly improving the software.
 
