@@ -3,25 +3,17 @@
 Welcome OpenPnP Community to the **PixiePlacer Wiki**!
 The PixiePlacer is a **DIY Pick and Place Machine** for SMD Components based around the amazing software **OpenPnP**. The machine is designed to be low cost and suited towards mid-scale manufacturing. A big shout out to the developers of OpenPnP that keep constantly improving the software.
 
-I wanted to create this Wiki, so that **all information** for this machine is **in one place** and not scattered everywhere.
+![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/PixiePlacer_Start.gif)
 
 Something look wrong? Please [let me know](https://github.com/PixiePlacer/PixiePlacer/issues/new)!
 
-## Why the name PixiePlacer? 
-The name “PixiePlacer” is a mashup from one of my favorite Youtubers AvE (Arduino vs Evil). “Pixies” are excited electrons that want to start dancing. And since it is a machine for PCB manufacturing I found it very suitable.
-
-**I love opensource** and this is my contribution to the OpenPnP community to give back and motivate others to start building their own Pick and Place!
-**So sit back and enjoy the Wiki.**
 
 # PixiePlacer Machine
-
-![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/PixiePlacer_Start.gif)
 ![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/1.JPEG)
 ![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/1.png)
 ![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/0.png)
-
-# Video Machine
-Comming Soon
+![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/2.png)
+![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/3.png)
 
 
 ***
