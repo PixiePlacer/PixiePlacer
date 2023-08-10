@@ -1,0 +1,249 @@
+Change Log 11.07.2023
+
+Install and Open VSCode
+Install PlatformIO Extension
+Open the Marlin Folder in VSCode
+Make Sure that the Marlin Folder is not in a File Drectory (Path) that contains any Spaces or Special Caracters -> This will safe you a lot of problems
+
+--------------
+Open "Platformio.ino" from the Menu left
+	Change
+		default_envs = mega2560
+		TO
+		default_envs = LPC1769
+When Pressing the "Build Button" on the bottom the Compiled code is in the .pio folder under builds.
+
+Inorder to flash the Firmware on the Board. the builded hex file needs to be copied to a micro SD. Insert the microSD card into the board and reboot it. It will copy over the new firmware.
+
+
+Afterwards the EPROM needs to be updated!
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+Marlin-> src -> Pins -> LPC1769 -> Skr 1.4
+
+--------------------------------------------------------------------------------------------------------------------------------
+Marlin-> Configuration.h
+
+§§§	Change:	§§§§
+#define STRING_CONFIG_H_AUTHOR "PixiePlacer"
+#ifndef MOTHERBOARD
+  #define MOTHERBOARD BOARD_BTT_SKR_V1_4_TURBO
+#endif
+
+§§§	Change: §§§§
+#define SERIAL_PORT -1
+
+§§§	Change: §§§§
+#define BAUDRATE 115200
+
+§§§	Uncomment and Change: §§§§
+#define SERIAL_PORT_2 0
+#define BAUDRATE_2 115200   // Enable to override BAUDRATE
+
+§§§	Uncomment and Change: §§§§
+#define CUSTOM_MACHINE_NAME "PixiePlacer 11.07.2023"	//get with M115
+
+§§§	Uncomment and Change: §§§§
+#define X_DRIVER_TYPE  TMC5160
+#define Y_DRIVER_TYPE  TMC5160
+#define Z_DRIVER_TYPE  TMC5160
+#define E0_DRIVER_TYPE TMC2208
+#define E1_DRIVER_TYPE TMC2208
+
+§§§	Change:	§§§§
+#define EXTRUDERS 2
+
+
+§§§	Change:	§§§§
+#define TEMP_SENSOR_0 998
+#define TEMP_SENSOR_1 998
+
+
+§§§	Comment: §§§§
+//#define PIDTEMPBED
+//#define PREVENT_COLD_EXTRUSION
+//#define EXTRUDE_MINTEMP 170
+//#define PREVENT_LENGTHY_EXTRUDE
+//#define EXTRUDE_MAXLENGTH 200
+
+//#define THERMAL_PROTECTION_HOTENDS
+//#define THERMAL_PROTECTION_BED
+//#define THERMAL_PROTECTION_CHAMBER
+//#define THERMAL_PROTECTION_COOLER
+
+§§§	Uncomment and Change: §§§§
+#define USE_XMIN_PLUG
+#define USE_YMIN_PLUG
+#define USE_ZMIN_PLUG
+//#define USE_XMAX_PLUG
+//#define USE_YMAX_PLUG
+//#define USE_ZMAX_PLUG
+
+§§§	Change: §§§§
+#define X_MIN_ENDSTOP_INVERTING true
+#define Y_MIN_ENDSTOP_INVERTING true
+#define Z_MIN_ENDSTOP_INVERTING true
+#define X_MAX_ENDSTOP_INVERTING true
+#define Y_MAX_ENDSTOP_INVERTING true
+#define Z_MAX_ENDSTOP_INVERTING true
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true
+
+§§§	Uncomment: §§§§
+#define ENDSTOPPULLUP_XMIN
+#define ENDSTOPPULLUP_YMIN
+
+§§§	Uncomment and Change: §§§§
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 10,   10,  80, 8.888}
+#define DEFAULT_MAX_FEEDRATE          { 200, 180, 100,  1000}
+#define DEFAULT_MAX_ACCELERATION      { 500, 500, 1000, 1000}
+
+#define DEFAULT_ACCELERATION          3000
+#define DEFAULT_RETRACT_ACCELERATION  3000
+#define DEFAULT_TRAVEL_ACCELERATION   3000
+#define CLASSIC_JERK
+#define DEFAULT_XJERK 0
+#define DEFAULT_YJERK 0
+#define DEFAULT_ZJERK 0
+#define DEFAULT_EJERK 0
+
+§§§	Comment: §§§§
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+
+§§§	Change: §§§§
+#define NOZZLE_TO_PROBE_OFFSET { 0, 0, 0 }
+#define PROBING_MARGIN 100				
+#define XY_PROBE_FEEDRATE 50			
+#define Z_PROBE_FEEDRATE_FAST 50		
+#define Z_PROBE_FEEDRATE_SLOW 10	
+
+§§§	Uncomment and Change: §§§§
+#define MULTIPLE_PROBING 2				
+
+
+§§§	Change: §§§§
+#define Z_CLEARANCE_DEPLOY_PROBE   10	
+#define Z_CLEARANCE_BETWEEN_PROBES  5	
+#define Z_CLEARANCE_MULTI_PROBE     5	
+
+#define Z_PROBE_LOW_POINT          -83
+#define Z_PROBE_OFFSET_RANGE_MIN -82
+#define Z_PROBE_OFFSET_RANGE_MAX 160
+
+§§§	Comment: §§§§
+//#define DISABLE_E false
+//#define DISABLE_INACTIVE_EXTRUDER
+
+§§§	Change: §§§§
+#define INVERT_X_DIR true
+#define INVERT_Y_DIR true
+#define INVERT_Z_DIR true
+
+#define X_BED_SIZE 610
+#define Y_BED_SIZE 527
+
+#define Z_MAX_POS 80
+
+§§§	Comment: §§§§
+//#define MIN_SOFTWARE_ENDSTOP_Z
+//#define MAX_SOFTWARE_ENDSTOP_Z
+
+
+§§§	Change: §§§§
+#define HOMING_FEEDRATE_MM_M { 4000, 4000, 4000 }
+
+§§§	Uncomment: §§§§
+#define EEPROM_SETTINGS
+
+§§§	Comment: §§§§
+//#define PRINTJOB_TIMER_AUTOSTART
+
+#define SERVO_DELAY { 300,300 }
+#define NUM_SERVOS 2
+#define DEACTIVATE_SERVOS_AFTER_MOVE
+
+
+#define SERVO0_PIN                         P2_00
+#define SERVO1_PIN                         P2_00
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Marlin-> Configuration_adv.h
+
+§§§	Comment: §§§§
+//#define AUTOTEMP
+
+§§§	Change: §§§§
+#define HOMING_BUMP_MM      { 0, 0, 2 }
+
+#define DEFAULT_STEPPER_DEACTIVE_TIME 0
+#define DISABLE_INACTIVE_X false
+#define DISABLE_INACTIVE_Y false
+#define DISABLE_INACTIVE_Z false
+#define DISABLE_INACTIVE_E false
+
+§§§	Uncomment and Change: §§§§
+#define SAVED_POSITIONS 2
+
+§§§	Comment: §§§§
+//#define SLOWDOWN
+
+§§§	Change: §§§§
+#define MIN_STEPS_PER_SEGMENT 1
+
+//VREF ​= I​ x 8 x Rsense
+#define X_CURRENT       1500 //2.1A Motor (Max 1600)
+#define X_MICROSTEPS    8
+#define X_RSENSE        0.075
+#define Y_CURRENT       2500 //4A Motor  (Max 3100)
+#define Y_MICROSTEPS    8
+#define Y_RSENSE        0.075
+#define Z_CURRENT       1500 //2.1A Motor
+#define Z_RSENSE        0.075
+#define E0_CURRENT      600
+#define E1_CURRENT      600
+
+§§§	Uncomment: §§§§
+#define TMC_USE_SW_SPI
+
+§§§	Change: §§§§
+#define E0_SLAVE_ADDRESS 0
+#define E1_SLAVE_ADDRESS 0
+
+
+#define CHOPPER_TIMING CHOPPER_DEFAULT_24V
+
+§§§	Uncomment: §§§§
+#define SENSORLESS_HOMING  
+
+§§§	Change: §§§§
+#define X_STALL_SENSITIVITY  5
+#define Y_STALL_SENSITIVITY  7
+  
+  
+§§§	Uncomment: §§§§
+#define MONITOR_DRIVER_STATUS
+#define TMC_DEBUG				//could lead to memory overflow
+
+§§§	Uncomment: §§§§
+#define CNC_COORDINATE_SYSTEMS
+
+§§§	Comment: §§§§
+//#define AUTO_REPORT_TEMPERATURES
+//#define EXTENDED_CAPABILITIES_REPORT
+
+§§§	Change: §§§§
+#define STARTUP_COMMANDS "M119" //Startup commands
+
+§§§	Uncomment: §§§§
+#define GCODE_MACROS	// M810-M819 to define and run G-code macros.			
+#define DIRECT_PIN_CONTROL
+#define PINS_DEBUGGING
+
+***** Interesting:
+//#define CUSTOM_USER_BUTTONS		// Testing *****	
+#define SENSORLESS_HOMING
+
+Fragen: SPW Working?
+E0_SLAVE_ADDRESS ??
+#define HYBRID_THRESHOLD // Active switching from quite to load // Testing *****	
