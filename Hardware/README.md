@@ -1,4 +1,4 @@
-# Hardware
+# Wiki Hardware
  - [Machine Frame](https://github.com/PixiePlacer/PixiePlacer/wiki/Machine-Frame)
  - [Y‐Axis](https://github.com/PixiePlacer/PixiePlacer/wiki/Y%E2%80%90Axis)
  - [X‐Axis](https://github.com/PixiePlacer/PixiePlacer/wiki/X%E2%80%90Axis)
