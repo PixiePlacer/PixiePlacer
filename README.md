@@ -43,7 +43,6 @@ Something look wrong? Please [let me know](https://github.com/PixiePlacer/PixieP
 	- [Nozzle Changing Station](https://github.com/PixiePlacer/PixiePlacer/wiki/Nozzle-Changing-Station)
 	- [Solderpaste Dispensing](https://github.com/PixiePlacer/PixiePlacer/wiki/Solderpaste-Dispensing)
 
-![enter image description here](xxx)
 # Electronics
  - Wiring Diagram
  - Pneuamtic Diagram
