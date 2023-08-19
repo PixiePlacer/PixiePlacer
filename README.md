@@ -1,6 +1,6 @@
 # PixiePlacer
 Welcome OpenPnP Community to the **PixiePlacer Wiki**!
-The PixiePlacer is a **DIY Pick and Place Machine** for SMD Components based around the amazing software **OpenPnP**. The machine is designed to be low cost and suited towards mid-scale manufacturing. A big shout out to the developers of OpenPnP that keep constantly improving the software.
+The PixiePlacer is a **DIY Pick and Place Machine** for SMD Components based around the amazing software **[OpenPnP](https://openpnp.org)**. The machine is designed to be low cost and suited towards mid-scale manufacturing. A big shout out to the developers of [OpenPnP](https://openpnp.org) that keep constantly improving the software.
 
 ![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/PixiePlacer_Start.gif)
 
@@ -44,19 +44,17 @@ Something look wrong? Please [let me know](https://github.com/PixiePlacer/PixieP
 	- [Solderpaste Dispensing](https://github.com/PixiePlacer/PixiePlacer/wiki/Solderpaste-Dispensing)
 
 # Electronics
- - Wiring Diagram
- - Pneuamtic Diagram
+ - [Electronics Diagram](https://github.com/PixiePlacer/PixiePlacer/wiki/Electronics-Diagram)
+ - [Pneuamtic Diagram](https://github.com/PixiePlacer/PixiePlacer/wiki/Pneuamtic-Diagram)
 
 # Software
 
  - [Marlin ‐ Motion Controller](https://github.com/PixiePlacer/PixiePlacer/wiki/Marlin-%E2%80%90-Motion-Controller)
  - [OpenPnP](https://github.com/PixiePlacer/PixiePlacer/wiki/OpenPnP)
 
-# Workflow
-Comming Soon
 
 # Component Feeder
 
  - [Parametric Strip Feeder](https://github.com/PixiePlacer/PixiePlacer/wiki/Parametric-Strip-Feeder)
- - Automagic PixieFeeder (In Development) 
+ - [Automagic PixieFeeder](https://github.com/PixiePlacer/PixiePlacer/wiki/Automagic-PixieFeeder)
 
