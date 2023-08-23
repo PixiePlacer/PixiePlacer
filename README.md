@@ -4,7 +4,7 @@ The PixiePlacer is a **DIY Pick and Place Machine** for SMD Components based aro
 
 ![enter image description here](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/PixiePlacer_Start.gif)
 
-Something look wrong? Please [let me know](https://github.com/PixiePlacer/PixiePlacer/issues/new)!
+Something looks wrong? Please [let me know](https://github.com/PixiePlacer/PixiePlacer/issues/new)!
 
 [![PixiePlacer](https://github.com/PixiePlacer/PixiePlacer/blob/main/Hardware/0.%20PixiePlacer%20Machine/YouTube_Thumbnail.png 'PixiePlacer')](https://www.youtube.com/@pixieplacer)
 
