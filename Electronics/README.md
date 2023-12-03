@@ -5,4 +5,4 @@
 
 
 ## Pneuamtic Diagram
-![](https://github.com/PixiePlacer/PixiePlacer/blob/main/Electronics/PixiePlacer_Pneuamtic_Diagramm.PNG)
+![](https://github.com/PixiePlacer/PixiePlacer/blob/main/Electronics/PixiePlacer_Pneuamtic_Diagramm.jpg)
