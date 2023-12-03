@@ -1,0 +1,1 @@
+# Don't copy the Configuration Files directly to your machine. That will in most cases just lead to errors. It is better to set up the machine yourself. Use these documents more as a guide.

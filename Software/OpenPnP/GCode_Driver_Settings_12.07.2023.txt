@@ -1,0 +1,190 @@
+
+++++++++++++  GCode Driver   +++++++++++++
+##########  Default  ################
+
+Command Confirm Regrex
+	^ok.*
+
+Position Report Regex
+	^.*X:(?<X>-?\d+\.\d+) Y:(?<Y>-?\d+\.\d+) Z:(?<Z>-?\d+\.\d+).*
+
+Command Error Regex
+	^error.*
+	
+Connect Command
+	G21 ; Set millimeters mode
+	G90 ; Set absolute positioning mode
+	M82 ; Set absolute mode for extruder
+	M42 I M1 P0205 S0; VAC Pump off
+	M42 I M1 P0126 S0; LED Top on
+	M42 I M1 P0010 S255; LED Bottom off
+	M42 I M1 P0100 S255; Air Nozzle 1 off
+	M42 I M1 P0125 S255; Air Nozzle 2 off
+
+Disable Command
+	M84 ; stepper motor off
+	M42 I M1 P0205 S0; VAC off
+	M42 I M1 P0205 S0; VAC Pump off
+	M42 I M1 P0126 S255; LED Top off
+	M42 I M1 P0010 S255; LED Bottom off
+	M42 I M1 P0100 S255; Air Nozzle 1 off
+	M42 I M1 P0125 S255; Air Nozzle 2 off
+	
+Home Command
+	G28 Z;
+	G28 Z;
+	G0 Z0 F1000;
+	G28 XY
+	G0 X0 Y0 Z0 F10000;
+	T0 S1;
+	G92 E0;
+	T1 S1;
+	G92 E0;
+	M42 I M1 P0205 S0; VAC Pump off
+	M42 I M1 P0126 S0; LED Top on
+	M42 I M1 P0010 S255; LED Bottom off
+	M42 I M1 P0100 S255; Air Nozzle 1 off
+	M42 I M1 P0125 S255; Air Nozzle 2 off
+	
+## Pump On Command
+	M42 I M1 P0205 S255; VAC on
+	
+## Pump Off Command
+	M42 I M1 P0205 S0;
+
+Get Position Command
+	M114 ; get position
+	
+Move to Command
+	G0 {X:X%.4f} {Y:Y%.4f} {Z:Z%.4f} {Rotation:E%.4f} F{FeedRate:%.0f		
+				
+Move to Complete Command
+	M400 ; Wait for moves to complete before returning
+	
+	
+In machine.xml
+
+supporting-pre-move="true" using-letter-variables="false"
+          
+
+<pre-move-command><![CDATA[
+					T0S1
+					G92E{Coordinate:%.4f}
+				]]></pre-move-command>
+
+<pre-move-command><![CDATA[
+					T1S1
+					G92E{Coordinate:%.4f}
+				]]></pre-move-command>		
+	
+NEW #############   H1 VAC PUMP   #############
+Actuate Boolean Command
+		{True:M42 I M1 P0205 S255}{False:M42 I M1 P0205 S0}
+
+Not Existing ##############   H1 N1   #####################
+Place Command
+	M42 I M1 P0100 S255; Air Nozzle 1
+	G4 P250;
+
+Not existing ##############   H1 N2   #####################
+Place Command
+	M42 I M1 P0125 S255; Air Nozzle 2
+	G4 P250;
+	
+	
+#############   H1 N1_Vac   #############
+Actuate Boolean Command
+	{True:M42 I M1 P0100 S0}{False:M42 I M1 P0100 S255}
+	M42 I M1 P0205 S255; VAC on
+	
+
+#############   H1 N2_Vac   #############
+Actuate Boolean Command
+	{True:M42 I M1 P0125 S0}{False:M42 I M1 P0125 S255}
+	M42 I M1 P0205 S255; VAC on
+	
+#############   H1 Solder Dispenser   #############
+Actuate Boolean Command
+	{True:M106 S255}{False:M106 S0}
+	
+#############   H1 Top Light   #############
+Actuate Boolean Command
+	{True:M42 I M1 P0010 S255}{False:M42 I M1 P0010 S0}
+	{True:M42 I M1 P0126 S0}{False:M42 I M1 P0126 S255}
+
+
+#############   Bottom Light   #############
+Actuate Boolean Command
+	{True:M42 I M1 P0010 S0}{False:M42 I M1 P0010 S255}
+	{True:M42 I M1 P0126 S255}{False:M42 I M1 P0126 S0}
+
+#############   Shot Solder Dispenser   #############
+Actuate Boolean Command
+	M106 S255				; On Solder Paste Dispenser
+	G4 P500 				; Wait 50ms
+	M106 S0					; Off Solder Paste Dispenser
+
+
+#############   Pneumatic Advance   #############
+Actuate Boolean Command
+	M106 S0
+	G4 P300
+	M106 S255
+
+#############   Pneumatic Post Pickup   #############
+Actuate Boolean Command
+
+
+	
+	
+	
+++++++++++++++ Feeder Controller   ++++++++++++++++
+
+##########  Default  ################
+
+Command Confirm Regrex
+	^ok.*
+	
+Command Error Regex
+	^error.*	
+	
+Connect Command
+	M610 S1 ; enable feeder
+
+Enable Command
+	M610 S1 ; enable feeder
+
+Disable Command
+	M610 S0 ; disable feeder
+	
+#############   Auto Feeder_4mm Advance   #############
+Actuate Double Command
+	M600 N{IntegerValue} F4
+	
+#############   Auto Feeder_8mm Advance   #############
+Actuate Double Command
+	M600 N{IntegerValue} F8
+
+
+#############   Auto Feeder_12mm Advance   #############
+Actuate Double Command
+	M600 N{IntegerValue} F12
+
+
+#############   Auto Feeder_PostPickup   #############
+Actuate Double Command
+	M601 N{IntegerValue}
+
+#############   Auto Feeder_Enable   #############
+Actuate Boolean Command
+	M610 S{True:1}{False:0}
+
+
+
+
+
+
+
+	
+	
+	
