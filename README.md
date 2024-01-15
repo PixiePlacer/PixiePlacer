@@ -47,7 +47,7 @@ Something looks wrong? Please [let me know](https://github.com/PixiePlacer/Pixie
 
 # Electronics
  - [Electronics Diagram](https://github.com/PixiePlacer/PixiePlacer/wiki/Electronics-Diagram)
- - [Pneuamtic Diagram](https://github.com/PixiePlacer/PixiePlacer/wiki/Pneuamtic-Diagram)
+ - [Pneumatic Diagram](https://github.com/PixiePlacer/PixiePlacer/wiki/Pneumatic-Diagram)
 
 # Software
 
